@@ -367,3 +367,20 @@ This is an experimental repository with multiple independent examples and propos
 ## Contributing
 
 When contributing, identify the component you are changing, document its prerequisites, and distinguish implemented behavior from proposals. Avoid committing secrets or deployment credentials.
+
+## Repository metadata
+
+| Field | Value |
+|---|---|
+| Project | Aura Ecosystem |
+| Repository | [auraecosystem/Auraecosystem.github.io](https://github.com/auraecosystem/Auraecosystem.github.io) |
+| Website | https://auraecosystem.github.io/ |
+| Status | Experimental |
+| Primary language reported by GitHub | Dart |
+| Author | Seriki walter Yakub |
+| Maintainer | Seriki walter Yakub |
+| License | Not specified |
+| Issues | https://github.com/auraecosystem/Auraecosystem.github.io/issues |
+| Source archive | https://github.com/auraecosystem/Auraecosystem.github.io/archive/refs/heads/main.zip |
+
+This repository is a GitHub Pages website and an experimental collection of documentation and independent technology examples. Its presence of Dart, Python, SwiftUI, web, and MCP artifacts does not imply that they form one integrated or production-ready application. See [docs/REPOSITORY-METADATA.md](docs/REPOSITORY-METADATA.md) for the detailed metadata record and [docs/AURA-ECOSYSTEM.mediawiki](docs/AURA-ECOSYSTEM.mediawiki) for a MediaWiki-compatible software infobox.
