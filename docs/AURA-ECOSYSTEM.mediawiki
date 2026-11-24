@@ -1,0 +1,61 @@
+{{Software
+|templatemode       =
+|name               = Aura Ecosystem
+|status             = Experimental
+|type1              = Research software
+|type2              = Documentation and static website
+|hook1              =
+|hook2              =
+|newhook1           =
+|newhook2           =
+|username           = auraecosystem
+|author             = Seriki walter Yakub
+|maintainer         = Seriki walter Yakub
+|description        = Experimental multidisciplinary documentation and GitHub Pages project containing web assets, Flutter/Dart examples, Python notebook tooling, SwiftUI experiments, MCP-related artifacts, and research proposals. Its components are independent examples rather than one integrated production application.
+|image              =
+|imagesize          =
+|version            = Not specified
+|update             = 24 November 2026
+|version preview    =
+|update preview     =
+|compatibility policy =
+|mediawiki          = Not applicable
+|php                = Not applicable
+|needs-updatephp    = No
+|composer           = Not applicable
+|virtual domain     = auraecosystem.github.io
+|table1             =
+|table2             =
+|license            = No license specified
+|download           = https://github.com/auraecosystem/Auraecosystem.github.io/archive/refs/heads/main.zip
+|show-popularity    = yes
+|repo               = https://github.com/auraecosystem/Auraecosystem.github.io
+|readme             = https://github.com/auraecosystem/Auraecosystem.github.io/blob/main/README.md
+|changelog          =
+|help               = https://github.com/auraecosystem/Auraecosystem.github.io/issues
+|example            = https://auraecosystem.github.io/
+|namespace          =
+|parameters         =
+|tags               = Aura Ecosystem, Artificial Intelligence, Research, Flutter, Dart, Python, SwiftUI, Model Context Protocol, Jupyter, GitHub Pages
+|rights             = Copyright ownership and redistribution terms are not specified in the repository
+|compatibility      = GitHub Pages; technologies represented include HTML, CSS, JavaScript, Dart, Flutter, Python, and SwiftUI. End-to-end compatibility is not established.
+|phabricator        =
+|translate          =
+|vagrant-role       =
+|}}
+
+== Project scope ==
+Aura Ecosystem is an experimental collection of documentation, web assets, code examples, and research proposals. The repository does not currently establish these components as one integrated production application.
+
+== Repository facts ==
+* Repository: https://github.com/auraecosystem/Auraecosystem.github.io
+* Website: https://auraecosystem.github.io/
+* Default branch: main
+* License: not specified
+* Release version: not specified
+
+== Implementation caveats ==
+* Flutter examples may require additional project configuration.
+* SwiftUI code depends on external modules and views not included in the repository.
+* MCP artifacts do not constitute a complete LM Studio-to-MCP integration.
+* Proposed data formats and research capabilities should not be described as implemented until verified in source.
