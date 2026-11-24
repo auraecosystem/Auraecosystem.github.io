@@ -12,10 +12,6 @@ permissions:
 jobs:
   execute-notebook:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10"]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,17 +19,35 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.10"
 
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip
+      - name: Install notebook tooling
+        run: python -m pip install --upgrade pip nbconvert ipykernel
 
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-
-      - name: Execute notebook
+      - name: Execute LMLM notebook
         run: |
           mkdir -p executed_notebooks
-          jupyter nbconvert --to notebook --execute Notebook/notebook.ipynb \
+          jupyter nbconvert --to notebook --execute \
+            Notebook/LMLM_Interactive_Executable_Notebook.ipynb \
             --ExecutePreprocessor.timeout=600 \
-            --output executed_notebooks/executed-notebook.ipynb
+            --output executed-LMLM-Interactive-Executable-Notebook.ipynb \
+            --output-dir executed_notebooks
+
+      - name: Verify executed notebook output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("executed_notebooks/executed-LMLM-Interactive-Executable-Notebook.ipynb")
+          notebook = json.loads(path.read_text(encoding="utf-8"))
+          errors = [
+              (index, output.get("ename"), output.get("evalue"))
+              for index, cell in enumerate(notebook.get("cells", []))
+              for output in cell.get("outputs", [])
+              if output.get("output_type") == "error"
+          ]
+          if errors:
+              raise SystemExit(f"Notebook contains execution errors: {errors}")
+          print(f"Executed {len(notebook.get('cells', []))} notebook cells successfully.")
+          PY
