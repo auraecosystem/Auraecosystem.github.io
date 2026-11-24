@@ -100,6 +100,7 @@ Run tests from a valid Flutter project environment:
 ```bash
 flutter test
 ```
+[copilot](https://github.com/copilot/share/002b4104-0b60-84d6-9143-e0074434486b)
 
 ## Python environment
 
@@ -297,4 +298,89 @@ Until a license is added, the repository is not explicitly available for unrestr
 
 Repository: https://github.com/gh-io/auraecosystem
 Published site: https://gh-io.github.io/auraecosystem/
+
+# Aura Ecosystem
+
+Aura Ecosystem is an experimental collection of project documentation, web-publishing assets, and small code examples. It includes Flutter/Dart samples, Python notebook dependencies, SwiftUI MCP-related UI code, and proposals for AI, quantum, and scientific research workflows. These pieces are independent experiments, not one integrated application.
+
+- **Project site:** <https://gh-io.github.io/auraecosystem/>
+- **Repository:** <https://github.com/gh-io/auraecosystem>
+
+## Repository contents
+
+| Path | What it contains |
+|---|---|
+| `lib/main.dart` | Flutter example that fetches and displays an album from JSONPlaceholder |
+| `main.dart` | Separate Dart HTTP example using DartPad endpoints |
+| `test/` | Test for the Flutter album-fetch example |
+| `requirements.txt` | Python data, visualization, notebook, and test dependencies |
+| `Docs/` | Short project overview and related materials |
+| `docs/` | Additional documentation |
+| `src/` | Experimental project notes and a small Python PDF utility |
+| `MCPToolsListView.swift` | SwiftUI view for searching and listing MCP server tools |
+| `mcp_config.default.json` | Empty starter MCP server configuration |
+| `.github/workflows/` | Notebook CI and two GitHub Pages deployment workflows |
+
+The repository also includes Swift library-evolution documents, web assets, and a bundled GitHub MCP server executable. Some documentation describes proposed features; check the code before treating those concepts as implemented.
+
+## Getting started
+
+### Python tools
+
+Create a virtual environment and install the dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt
 ```
+
+The requirements include pandas, NumPy, Matplotlib, Seaborn, Jupyter, pytest, and nbval.
+
+### Flutter example
+
+`lib/main.dart` fetches album 1 from JSONPlaceholder and renders its title, with loading and error states. The repository does not include a root `pubspec.yaml`, so the example is not directly runnable from a fresh clone. It requires a Flutter project configured with the Flutter SDK and the `http` package.
+
+## CI and publishing notes
+
+### Notebook CI
+
+`.github/workflows/notebook-ci.yml` runs `jupyter nbconvert` on `notebook/Notebook.ipynb`. That path does not appear in the repository’s top-level contents, so the workflow’s notebook step is not aligned with the checked-in layout. Update the workflow path or add the intended notebook before relying on this CI job.
+
+### GitHub Pages
+
+Two workflows are configured to deploy to GitHub Pages when `main` changes:
+
+- `static.yml` uploads the repository root as the Pages artifact.
+- `jekyll.yml` builds the repository with Jekyll and uploads the generated `_site`.
+
+Both target the Pages deployment environment. Their workflow definitions do not identify which one is the active publishing source; check the repository’s Pages settings and recent Actions deployments to determine what is currently live. The Jekyll workflow also expects a working Bundler/Jekyll setup.
+
+## MCP and LM Studio
+
+`MCPToolsListView.swift` is a SwiftUI interface that displays and filters tools supplied by a GitHub Copilot MCP tool manager. The default MCP configuration is empty. The repository does not provide a complete, documented LM Studio-to-MCP integration, and the Swift file depends on external modules and view components not included here.
+
+## Project status
+
+This is an experimental repository with multiple independent examples and proposals. There is no single build command or test suite that builds every component together. No license is specified in the repository; ask the maintainers about reuse and redistribution.
+
+## Contributing
+
+When contributing, identify the component you are changing, document its prerequisites, and distinguish implemented behavior from proposals. Avoid committing secrets or deployment credentials.
+
+## Repository metadata
+
+| Field | Value |
+|---|---|
+| Project | Aura Ecosystem |
+| Repository | [auraecosystem/Auraecosystem.github.io](https://github.com/auraecosystem/Auraecosystem.github.io) |
+| Website | https://auraecosystem.github.io/ |
+| Status | Experimental |
+| Primary language reported by GitHub | Dart |
+| Author | Seriki walter Yakub |
+| Maintainer | Seriki walter Yakub |
+| License | Not specified |
+| Issues | https://github.com/auraecosystem/Auraecosystem.github.io/issues |
+| Source archive | https://github.com/auraecosystem/Auraecosystem.github.io/archive/refs/heads/main.zip |
+
+This repository is a GitHub Pages website and an experimental collection of documentation and independent technology examples. Its presence of Dart, Python, SwiftUI, web, and MCP artifacts does not imply that they form one integrated or production-ready application. See [docs/REPOSITORY-METADATA.md](docs/REPOSITORY-METADATA.md) for the detailed metadata record and [docs/AURA-ECOSYSTEM.mediawiki](docs/AURA-ECOSYSTEM.mediawiki) for a MediaWiki-compatible software infobox.
