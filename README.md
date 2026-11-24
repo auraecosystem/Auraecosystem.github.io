@@ -100,6 +100,7 @@ Run tests from a valid Flutter project environment:
 ```bash
 flutter test
 ```
+[copilot](https://github.com/copilot/share/002b4104-0b60-84d6-9143-e0074434486b)
 
 ## Python environment
 
