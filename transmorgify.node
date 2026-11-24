@@ -1,0 +1,14 @@
+Publishing transmogrify 1.0.0
+    .gitignore
+    CHANGELOG.md
+    README.md
+    lib
+        transmogrify.dart
+        src
+            transmogrifier.dart
+            transmogrification.dart
+    pubspec.yaml
+    test
+        transmogrify_test.dart
+
+Package has 0 warnings.
